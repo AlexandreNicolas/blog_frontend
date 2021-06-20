@@ -1,0 +1,50 @@
+{
+  "extends": [
+    "airbnb",
+    "plugin:flowtype/recommended"
+  ],
+  "plugins": [
+    "import",
+    "flowtype",
+    "jest",
+    "json",
+    "react"
+  ],
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "env": {
+    "browser": true,
+    "jest/globals": true,
+    "mocha": true
+  },
+  "rules": {
+    "one-var": 0,
+    "max-len": [
+      "error",
+      120
+    ],
+    "no-confusing-arrow": 0,
+    "no-param-reassign": [
+      "error",
+      {
+        "props": false
+      }
+    ],
+    "no-use-before-define": [
+      "error",
+      {
+        "functions": false,
+        "classes": true
+      }
+    ],
+    "import/no-extraneous-dependencies": 0,
+    "import/no-unresolved": 0,
+    "import/extensions": 0,
+    "no-nested-ternary": 0,
+    "react/prefer-stateless-function": 0,
+    "react/no-array-index-key": 0,
+    "react/forbid-prop-types": 0,
+    "linebreak-style": 0
+  }
+}
