@@ -28,6 +28,14 @@
   color: #61dafb;
 }
 
+.click-a:hover > .click-b > .click-c{
+  opacity: 1;
+}
+
+.click-a > .click-b > .click-c{
+  opacity: 0;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
