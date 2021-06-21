@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 import { Alert } from 'reactstrap';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 import { CssBaseline, Grid, TextField } from '@material-ui/core';
 import Container from '@material-ui/core/Container';
 import Header from './Header';
-import createPost from '../service/createPost';
+import updatePost from '../service/updatePost';
 
-const NewPost = () => {
+const EditPost = () => {
   const history = useHistory();
-  const [title, setTitle] = useState('');
-  const [description, setDescription] = useState('');
+  const location = useLocation();
+  const [title, setTitle] = useState(location.state.title);
+  const [description, setDescription] = useState(location.state.description);
   const [error, setError] = useState('');
 
   return (
@@ -19,7 +20,7 @@ const NewPost = () => {
       <Container maxWidth="lg">
         <Header title="Blog" />
         <main>
-          <h2>Nova Publicação</h2>
+          <h2>Editar Publicação</h2>
           <Grid container spacing={3} sx={{ display: 'flex' }}>
             <Grid item xs={12} md={8}>
               <TextField
@@ -52,11 +53,11 @@ const NewPost = () => {
                 variant="contained"
                 onClick={async () => {
                   try {
-                    const postObject = {
+                    const createPost = {
                       title,
                       description,
                     };
-                    await createPost(postObject);
+                    await updatePost(createPost, location.state._id);
                     history.push('/');
                   } catch (err) {
                     setError(err);
@@ -67,8 +68,8 @@ const NewPost = () => {
               </Button>
               <Button
                 variant="contained"
-                href="/"
                 style={{ 'margin-left': '10px' }}
+                href="/"
               >
                 CANCELAR
               </Button>
@@ -91,4 +92,4 @@ const NewPost = () => {
   );
 };
 
-export default NewPost;
+export default EditPost;

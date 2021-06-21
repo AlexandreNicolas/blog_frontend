@@ -10,7 +10,7 @@ function Sidebar(props) {
   } = props;
 
   return (
-    <Grid item md={4} sx={{ mt: 3 }}>
+    <Grid style={{ position: 'fixed', right: '50vh' }} justifyContent item md={3} sx={{ mt: 3 }}>
       <Typography variant="h6" gutterBottom>
         Recentes
       </Typography>

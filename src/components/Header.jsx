@@ -9,7 +9,7 @@ import Typography from '@material-ui/core/Typography';
 function Header({ title }) {
   return (
     <Toolbar sx={{ borderBottom: 1, borderColor: 'divider' }}>
-      <Button variant="contained" size="small" href="/newpost">Nova Publicação</Button>
+      <Button variant="outlined" size="small" href="/newpost">Nova Publicação</Button>
       <Typography
         component="h2"
         variant="h5"
