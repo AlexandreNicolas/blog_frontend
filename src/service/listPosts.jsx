@@ -1,7 +1,7 @@
 import api from './api';
 
 const listPosts = async () => {
-  const postURL = '';
+  const postURL = 'posts';
   const config = {
     headers: {
       'Content-Type': 'application/json',
