@@ -6,16 +6,16 @@ import Link from '@material-ui/core/Link';
 
 function Sidebar(props) {
   const {
-    archives,
+    posts,
   } = props;
 
   return (
-    <Grid style={{ position: 'fixed', right: '50vh' }} justifyContent item md={3} sx={{ mt: 3 }}>
+    <Grid className="facet_sidebar" style={{ position: 'fixed', right: '17%' }} item md={2} sx={{ mt: 3 }}>
       <Typography variant="h6" gutterBottom>
         Recentes
       </Typography>
-      {archives.map((archive) => (
-        <Link display="block" variant="body1" href={archive.url} key={archive.title}>
+      {posts.slice(0, 5).map((archive) => (
+        <Link display="block" variant="body1" href="/" key={archive.title}>
           {archive.title}
         </Link>
       ))}
@@ -24,10 +24,9 @@ function Sidebar(props) {
 }
 
 Sidebar.propTypes = {
-  archives: PropTypes.arrayOf(
+  posts: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string.isRequired,
-      url: PropTypes.string.isRequired,
     }),
   ).isRequired,
 };

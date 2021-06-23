@@ -9,22 +9,6 @@ import Sidebar from './Sidebar';
 import Footer from './Footer';
 import listPosts from '../service/listPosts';
 
-const sidebar = {
-  archives: [
-    { title: 'March 2020', url: '#' },
-    { title: 'February 2020', url: '#' },
-    { title: 'January 2020', url: '#' },
-    { title: 'November 1999', url: '#' },
-    { title: 'October 1999', url: '#' },
-    { title: 'September 1999', url: '#' },
-    { title: 'August 1999', url: '#' },
-    { title: 'July 1999', url: '#' },
-    { title: 'June 1999', url: '#' },
-    { title: 'May 1999', url: '#' },
-    { title: 'April 1999', url: '#' },
-  ],
-};
-
 const maxPostsForPage = 4;
 
 export default function Blog() {
@@ -61,14 +45,14 @@ export default function Blog() {
               />
             </Grid>
             <Sidebar
-              archives={sidebar.archives}
+              posts={allPosts}
             />
           </Grid>
         </main>
       </Container>
       <Footer
-        title="Footer"
-        description="Something here to give the footer a purpose!"
+        title="Blog"
+        description=""
       />
     </>
   );
