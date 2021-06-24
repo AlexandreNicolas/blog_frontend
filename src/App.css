@@ -72,9 +72,20 @@
   border: 1px solid #FFFFFF;
 }
 
+.facet_sidebar {
+  right: 17%;
+  position: fixed;
+}
+
 @media (max-width: 1200px) {
   .facet_sidebar {
     display: none;
+  }
+}
+@media (max-width: 1550px) {
+  .facet_sidebar {
+    right: 10%;
+    position: fixed;
   }
 }
 

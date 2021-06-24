@@ -3,11 +3,11 @@ import ReactPaginate from 'react-paginate';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import Container from '@material-ui/core/Container';
-import Header from './Header';
 import FeaturedPost from './FeaturedPost';
 import Sidebar from './Sidebar';
 import Footer from './Footer';
 import listPosts from '../service/listPosts';
+import HeaderMain from './HeaderMain';
 
 const maxPostsForPage = 4;
 
@@ -25,7 +25,7 @@ export default function Blog() {
     <>
       <CssBaseline />
       <Container maxWidth="lg">
-        <Header title="Blog" />
+        <HeaderMain posts={allPosts} />
         <main>
           <Grid container spacing={5}>
             <Grid item xs={14} md={9}>

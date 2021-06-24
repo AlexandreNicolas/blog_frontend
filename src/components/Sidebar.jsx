@@ -10,13 +10,13 @@ function Sidebar(props) {
   } = props;
 
   return (
-    <Grid className="facet_sidebar" style={{ position: 'fixed', right: '17%' }} item md={2} sx={{ mt: 3 }}>
+    <Grid className="facet_sidebar" item md={2} sx={{ mt: 3 }}>
       <Typography variant="h6" gutterBottom>
         Recentes
       </Typography>
-      {posts.slice(0, 5).map((archive) => (
-        <Link display="block" variant="body1" href="/" key={archive.title}>
-          {archive.title}
+      {posts.slice(0, 5).map((post) => (
+        <Link display="block" variant="body1" href="/" key={post.title}>
+          {post.title}
         </Link>
       ))}
     </Grid>
