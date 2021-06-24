@@ -6,9 +6,9 @@ import IconButton from '@material-ui/core/IconButton';
 import AddIcon from '@material-ui/icons/Add';
 import { useMediaQuery } from 'react-responsive';
 import Typography from '@material-ui/core/Typography';
-import PersistentDrawerLeft from './PersistentDrawerLeft';
+import SidebarMobile from './SidebarMobile';
 
-function HeaderMain({ posts }) {
+const HeaderMain = ({ posts }) => {
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 600px)' });
   return (
     <>
@@ -31,10 +31,10 @@ function HeaderMain({ posts }) {
           Usuário Logado
         </Button>
       </Toolbar>
-      <PersistentDrawerLeft posts={posts} />
+      <SidebarMobile posts={posts} />
     </>
   );
-}
+};
 
 HeaderMain.propTypes = {
   posts: PropTypes.arrayOf(

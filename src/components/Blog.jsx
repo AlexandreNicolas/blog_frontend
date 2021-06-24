@@ -11,7 +11,7 @@ import HeaderMain from './HeaderMain';
 
 const maxPostsForPage = 4;
 
-export default function Blog() {
+const Blog = () => {
   const [allPosts, setAllPosts] = useState([]);
   const [updatePosts, setUpdatePosts] = useState(false);
   const [pageSelected, setPageSelected] = useState(0);
@@ -56,4 +56,6 @@ export default function Blog() {
       />
     </>
   );
-}
+};
+
+export default Blog;

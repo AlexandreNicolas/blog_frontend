@@ -41,15 +41,7 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-PersistentDrawerLeft.propTypes = {
-  posts: PropTypes.arrayOf(
-    PropTypes.shape({
-      title: PropTypes.string.isRequired,
-    }),
-  ).isRequired,
-};
-
-export default function PersistentDrawerLeft({ posts }) {
+const SidebarMobile = ({ posts }) => {
   const classes = useStyles();
   const theme = useTheme();
   const [open, setOpen] = useState(false);
@@ -113,4 +105,14 @@ export default function PersistentDrawerLeft({ posts }) {
       </Drawer>
     </>
   );
-}
+};
+
+SidebarMobile.propTypes = {
+  posts: PropTypes.arrayOf(
+    PropTypes.shape({
+      title: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
+};
+
+export default SidebarMobile;

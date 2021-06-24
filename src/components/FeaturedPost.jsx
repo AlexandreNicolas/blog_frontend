@@ -10,7 +10,7 @@ import CancelIcon from '@material-ui/icons/Cancel';
 import '../App.css';
 import deletePost from '../service/deletePost';
 
-function FeaturedPost({ post, updatePosts, setUpdatePosts }) {
+const FeaturedPost = ({ post, updatePosts, setUpdatePosts }) => {
   const [postDate, setPostDate] = useState('');
 
   useEffect(async () => {
@@ -45,7 +45,7 @@ function FeaturedPost({ post, updatePosts, setUpdatePosts }) {
       </CardContent>
     </Card>
   );
-}
+};
 
 FeaturedPost.propTypes = {
   post: PropTypes.shape({

@@ -19,7 +19,7 @@ function Copyright() {
   );
 }
 
-function Footer(props) {
+const Footer = (props) => {
   const { description, title } = props;
 
   return (
@@ -40,7 +40,7 @@ function Footer(props) {
       </Container>
     </Box>
   );
-}
+};
 
 Footer.propTypes = {
   description: PropTypes.string.isRequired,
