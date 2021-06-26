@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://leadeasybackend.herokuapp.com',
+  baseURL: process.env.REACT_APP_PROXY_TARGET,
   maxRedirects: 0,
 });
 
